@@ -132,7 +132,15 @@ public class GraphHamming extends JFrame
 
 
 
-	
+	private void setButton() 
+	{
+		showStationButton = new JButton("Show Station");
+		calcHDButton= new JButton("Calculate HD");
+		addStationButton= new JButton("Add Station");
+		colorpickerButton = new JButton("Choose Color");
+		
+		
+	}
 
 
 
