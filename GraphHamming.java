@@ -124,6 +124,14 @@ public class GraphHamming extends JFrame
 
 
 
+	private void setComboBox() 
+	{
+		compareLabel = new JLabel("Compare with: ");
+		stationIDCheckbx = new JComboBox<Object>(hammDis.getStationList().toArray());
+	}
+
+
+
 	
 	
 	
