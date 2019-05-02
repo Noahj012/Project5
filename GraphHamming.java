@@ -211,7 +211,61 @@ public class GraphHamming extends JFrame
 			
 		});
 		
-		
+		colorpickerButton.addActionListener(new ActionListener()
+				{
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) 
+					{
+						// TODO Auto-generated method stub
+						int reply =	JOptionPane.showConfirmDialog(
+								GraphHamming.this, "Do you want to change the color?"
+								,"Yes. I do",
+								JOptionPane.YES_NO_CANCEL_OPTION,
+								JOptionPane.QUESTION_MESSAGE);
+						
+				        if (reply == JOptionPane.YES_OPTION) 
+				        {
+					        	
+					        		String[] hl = {"Slider Panel","List Panel", "Display Panel"};
+						        	reply = JOptionPane.showOptionDialog(null, //Component parentComponent
+				                               "Which Panel?", //Object message,
+				                               "Choose an option", //String title
+				                               JOptionPane.YES_NO_CANCEL_OPTION, //int optionType
+				                              JOptionPane.INFORMATION_MESSAGE, //int messageType
+				                               null, //Icon icon,
+				                               hl, //Object[] options,
+				                               "Panel1");
+							        		if (reply == JOptionPane.YES_OPTION)
+								        	{
+								        			Color color =  JColorChooser.showDialog(GraphHamming.this,
+													"Choose Background Color",
+													panel1.getBackground());
+								        			panel2.setBackground(color);
+													panel1.setBackground(color);
+								        	}
+							        		else if (reply == JOptionPane.NO_OPTION)
+								        	{
+							        			Color color =  JColorChooser.showDialog(GraphHamming.this,
+												"Choose Background Color",
+												panel4.getBackground());
+							        			panel3.setBackground(color);
+												panel4.setBackground(color);
+								        	}
+							        		else if (reply == JOptionPane.CANCEL_OPTION)
+								        	{
+							        			Color color =  JColorChooser.showDialog(GraphHamming.this,
+												"Choose Background Color",
+												panel5.getBackground());
+							   
+							        			panel5.setBackground(color);
+							        			
+								        	}
+					        	}
+					        	
+				        }
+				
+				});
 	}
 
 
