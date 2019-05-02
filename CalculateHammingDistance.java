@@ -10,7 +10,8 @@ public class CalculateHammingDistance
 {
 	private int[] node;
 	private ArrayList<String> stationList = new ArrayList<String>();
-	protected TreeSet<String> hd1Set, hd2Set, hd3Set, hd4Set, tree;	
+	protected TreeSet<String> hd1Set, hd2Set, hd3Set, hd4Set;
+	TreeSet<Object> tree;	
 	
 	public int calculatingHammingDstance(Object x, String y)
 	{
@@ -33,10 +34,11 @@ public class CalculateHammingDistance
 	{
 		// declares two variables to keep track of the hamming distances of the stations code
 		int diffCount = 0;
+		tree = new TreeSet<Object>();
 		Object[] array  = stationList.toArray();
 		for (Object h: array)
 		{
-			tree.add(h.toString());
+			tree.add(h);
 		}
 		node = new int[5];
 		hd1Set = new TreeSet<String>();
@@ -106,7 +108,7 @@ public class CalculateHammingDistance
 		return stationList;
 	}
 	
-	public TreeSet<String> getSortedList()
+	public TreeSet<Object> getSortedList()
 	{
 		return tree;
 	}

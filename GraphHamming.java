@@ -3,6 +3,8 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.TreeSet;
 
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
@@ -35,6 +37,7 @@ public class GraphHamming extends JFrame
 	private JList<Object> list = new JList<Object>();
 	private JComboBox stationIDCheckbx;
 	private JScrollPane scrollPane;
+	private TreeSet<Object> test;
 	
 	CalculateHammingDistance hammDis = new CalculateHammingDistance();
 	
@@ -206,7 +209,22 @@ public class GraphHamming extends JFrame
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				// TODO Auto-generated method stub
-				stationIDCheckbx.addItem(newStationEntryText.getText().toUpperCase());
+					
+				test = hammDis.getSortedList();
+				String str = newStationEntryText.getText();
+				Object obj = str;
+				if (!(newStationEntryText.getText().length() == 4))
+				{
+					JOptionPane.showConfirmDialog(
+							GraphHamming.this, "Please enter a four letter Id"
+							,"Error",
+							JOptionPane.OK_OPTION,
+							JOptionPane.OK_OPTION);
+				}
+				else if(!(test.contains(obj)));
+				{
+					stationIDCheckbx.addItem(newStationEntryText.getText().toUpperCase());
+				}
 			}
 			
 		});
