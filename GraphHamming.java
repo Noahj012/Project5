@@ -38,7 +38,67 @@ public class GraphHamming extends JFrame
 	
 	CalculateHammingDistance hammDis = new CalculateHammingDistance();
 	
-	
+	public GraphHamming() throws IOException
+	{
+		super("Hamming Distance");
+		hammDis.readFile("Mesonet.txt");
+		
+		setFrame();
+		setSlider(1, 4);
+		setTextField(10);
+		setHammDisDisplay();
+		setButton();
+		
+		
+		setComboBox();
+		
+		scrollPane = new JScrollPane(list);
+		
+		setPanels();
+		
+		panel2.add(label);
+		panel2.add(hammDisSliderDisplay);
+		panel1.add(panel2);
+		panel1.add(hammDisSlider);
+		
+		panel3.add(showStationButton);
+		panel3.add(scrollPane);
+		
+		panel4.add(compareLabel);
+		panel4.add(stationIDCheckbx);
+		
+		panel5.add(calcHDButton);
+		panel5.add(colorpickerButton);
+		
+		panel5.add(dist0);
+		panel5.add(dist0Display);
+		panel5.add(dist1);
+		panel5.add(dist1Display);
+		panel5.add(dist2);
+		panel5.add(dist2Display);
+		panel5.add(dist3);
+		panel5.add(dist3Display);
+		panel5.add(dist4);
+		panel5.add(dist4Display);
+		panel5.add(addStationButton);
+		
+		panel5.add(newStationEntryText);
+		panel5.setLayout(new GridLayout(7,2));
+		mainPanel.setLayout(new GridLayout(4,0));
+		
+		mainPanel.add(panel1);
+		mainPanel.add(panel3);
+		mainPanel.add(panel4);
+		mainPanel.add(panel5);
+		frame.add(mainPanel);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		
+		
+	}
+
+
 	
 	
 	
