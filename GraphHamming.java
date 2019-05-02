@@ -136,6 +136,29 @@ public class GraphHamming extends JFrame
 
 
 
+	private void setTextField(int amount) 
+	{
+		label = new JLabel("Hamming Distance: ");
+		hammDisSliderDisplay = new JTextField(amount);
+		dist0Display = new JTextField(amount);
+		dist1Display = new JTextField(amount);
+		dist2Display = new JTextField(amount);
+		dist3Display = new JTextField(amount);
+		dist4Display = new JTextField(amount);
+		newStationEntryText = new JTextField(amount);
+		
+		dist0Display.setEditable(false);
+		dist1Display.setEditable(false);
+		dist2Display.setEditable(false);
+		dist3Display.setEditable(false);
+		dist4Display.setEditable(false);
+		
+		hammDisSliderDisplay.setText("1");
+		hammDisSliderDisplay.setEditable(false);
+	}
+
+
+
 	private void setFrame()
 	{
 		frame = new JFrame();
