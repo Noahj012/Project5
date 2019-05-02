@@ -34,3 +34,28 @@ CalculateHammingDistance Class
 	the 2 classes
 	getNodeDistance - allows encapsilation, and allows the data to be shared between
 	the 2 classes
+
+GraphHamming
+	1) GraphHamming()
+	the constructor that calls all the initialization methods and adds all components
+	to the apporpriate panel, and adds the panels in the correct order to the frame
+	
+	2) Initialization methods
+		*setPanels - intializes all panels declared as class fields
+		*setHammDisDisplay - intializes all labels used for displaying calcHD results
+		*setCombBox - intializes the combox, and sets it display to the originl 120
+			station Ids.
+		*setTextfields - intializes all textfields and sets the to not be editable
+			so they will only be used for display
+		*setFrame - intializes the main frame
+		*setSlider - intializes the slider, and adds a changelistener to alter the
+				displayed hamming distance
+
+	3)setButtons - intializes all buttons, but is also where I add the action listeners
+		*CalcHDButton - sets the text field according to the data calculated in 
+		the calculateHammingDistance class
+		*showStationButton - gets the appropriate treeSet from calcHammingDist class
+		based on the number displayed from the slider, and updates the Jlist to show
+		the data form the treeSet
+		*colorPickerButton - opens a window pane to choose the different colors for 
+		the background.
