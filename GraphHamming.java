@@ -139,6 +139,24 @@ public class GraphHamming extends JFrame
 		addStationButton= new JButton("Add Station");
 		colorpickerButton = new JButton("Choose Color");
 		
+		calcHDButton.addActionListener(new ActionListener()
+				{
+
+					@Override
+					public void actionPerformed(ActionEvent e)
+					{
+						// TODO Auto-generated method stub
+						hammDis.calculateNode(stationIDCheckbx.getSelectedItem());
+						
+						dist0Display.setText(Integer.toString(hammDis.getNodeDistance()[0]));
+						dist1Display.setText(Integer.toString(hammDis.getNodeDistance()[1]));
+						dist2Display.setText(Integer.toString(hammDis.getNodeDistance()[2]));
+						dist3Display.setText(Integer.toString(hammDis.getNodeDistance()[3]));
+						dist4Display.setText(Integer.toString(hammDis.getNodeDistance()[4]));
+					}
+			
+				});
+		
 		
 	}
 
