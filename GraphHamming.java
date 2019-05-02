@@ -198,6 +198,19 @@ public class GraphHamming extends JFrame
 			
 		});
 		
+		addStationButton.addActionListener(new ActionListener()
+		{
+
+			@SuppressWarnings("unchecked")
+			@Override
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				// TODO Auto-generated method stub
+				stationIDCheckbx.addItem(newStationEntryText.getText());
+			}
+			
+		});
+		
 		
 	}
 
