@@ -206,7 +206,7 @@ public class GraphHamming extends JFrame
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				// TODO Auto-generated method stub
-				stationIDCheckbx.addItem(newStationEntryText.getText());
+				stationIDCheckbx.addItem(newStationEntryText.getText().toUpperCase());
 			}
 			
 		});
@@ -279,7 +279,7 @@ public class GraphHamming extends JFrame
 		dist2Display = new JTextField(amount);
 		dist3Display = new JTextField(amount);
 		dist4Display = new JTextField(amount);
-		newStationEntryText = new JTextField(amount);
+		newStationEntryText = new JTextField(4);
 		
 		dist0Display.setEditable(false);
 		dist1Display.setEditable(false);
