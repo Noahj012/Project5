@@ -99,6 +99,19 @@ public class GraphHamming extends JFrame
 	}
 
 
+
+	private void setPanels() {
+		mainPanel = new JPanel();
+		panel1 = new JPanel();
+		panel2 = new JPanel();
+		panel3 = new JPanel();
+		panel4 = new JPanel();
+		panel5 = new JPanel();
+		panel6 = new JPanel();
+	}
+
+
+
 	
 	
 	
