@@ -37,7 +37,7 @@ public class GraphHamming extends JFrame
 	private JList<Object> list = new JList<Object>();
 	private JComboBox stationIDCheckbx;
 	private JScrollPane scrollPane;
-	ArrayList<String> as;
+	private ArrayList<String> as;
 	
 	CalculateHammingDistance hammDis = new CalculateHammingDistance();
 	
