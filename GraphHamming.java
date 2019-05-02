@@ -133,6 +133,32 @@ public class GraphHamming extends JFrame
 
 
 	
+
+
+
+	private void setSlider(int min, int max) {
+		hammDisSlider = new JSlider(min, max);
+		hammDisSlider.setValue(min);
+		hammDisSlider.setMajorTickSpacing(min);
+		hammDisSlider.setPaintLabels(true);
+		hammDisSlider.setPaintTicks(true);
+		
+		hammDisSlider.addChangeListener(new ChangeListener() {
+
+			@Override
+			public void stateChanged(ChangeEvent e) 
+			{
+				// TODO Auto-generated method stub
+				int value = hammDisSlider.getValue(); 
+				if (value == 1 || value == 2 || value == 3 || value == 4)
+				{
+					hammDisSliderDisplay.setText(Integer.toString(value));
+				}
+			}
+			
+		});
+	}
+	
 	
 	
 	
