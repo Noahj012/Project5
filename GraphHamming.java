@@ -107,7 +107,19 @@ public class GraphHamming extends JFrame
 		panel3 = new JPanel();
 		panel4 = new JPanel();
 		panel5 = new JPanel();
-		panel6 = new JPanel();
+	}
+
+
+
+	private void setHammDisDisplay() 
+	{
+		
+		// TODO Auto-generated method stub
+		dist0 = new JLabel("Distance 0: ");
+		dist1 = new JLabel("Distance 1: ");
+		dist2 = new JLabel("Distance 2: ");
+		dist3 = new JLabel("Distance 3: ");
+		dist4 = new JLabel("Distance 4: ");
 	}
 
 
