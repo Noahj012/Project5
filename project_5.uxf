@@ -1,1 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><umlet_diagram></umlet_diagram>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>0</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>CalculateHammingDistance
+--
+-node: int[]
+-sationList: ArrayList&lt;String&gt;
+-hd1Set, hd2Set, hd3Set, hd4Set: TreeSet&lt;String&gt;
+--
++Operation(x: Object, y: String): int
++calculateNode(station1: Object)
++readFile(filename: String)
++getStationList(): ArrayList&lt;String&gt;
++getNodeDistance(): int[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>250</y>
+      <w>820</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>GraphHamming
+--
+-frame: JFrame
+-hammDisSlider:JSlider
+-hammDisSliderDisplay, dist0Display, dist1Display. dist2Display, dist3Display, dist4Display, newStationEntryText: JTextField
+-label, compareLabel, dist0, dist1, dist2, dist3, dist4: JLabel
+-showStationButton, calcHDButton, addStationButton, colorpickerButton: JButton
+-mainPanel, panel1, panel2, panel3, panel4, panel5: JPanel
+-list:JList&lt;Object&gt;
+-stationIDCheckbx:JComboBox
+-scrollPane: jScrollPane
+--
++GraphHamming(): void
+-setPanels(): void
+-setHammingDisDsiplay(): void
+-setComboBox(): void
+-setButton(): void
+-setTextFields(): void
+-setFrame(): void
+-setSlider(): void
++main(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>180</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+</diagram>
