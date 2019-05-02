@@ -157,6 +157,47 @@ public class GraphHamming extends JFrame
 			
 				});
 		
+		showStationButton.addActionListener(new ActionListener()
+		{
+
+			@SuppressWarnings("unchecked")
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				// TODO Auto-generated method stub
+				try
+				{
+					if (hammDisSliderDisplay.getText().equals("1"))
+					{
+						list.setListData(hammDis.hd1Set.toArray());
+						panel3.repaint();
+						
+					}
+					if (hammDisSliderDisplay.getText().equals("2"))
+					{
+						list.setListData(hammDis.hd2Set.toArray());
+						panel3.repaint();
+						
+					}
+					if (hammDisSliderDisplay.getText().equals("3"))
+					{
+						list.setListData(hammDis.hd3Set.toArray());
+						panel3.repaint();
+					}
+					if (hammDisSliderDisplay.getText().equals("4"))
+					{
+						list.setListData(hammDis.hd4Set.toArray());
+						panel3.repaint();
+					}
+				}
+				catch(NullPointerException h)
+				{
+					JOptionPane.showMessageDialog(GraphHamming.this, "Please calculate the hamming distance first");
+				}
+			}
+			
+		});
+		
 		
 	}
 
