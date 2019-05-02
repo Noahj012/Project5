@@ -136,6 +136,14 @@ public class GraphHamming extends JFrame
 
 
 
+	private void setFrame()
+	{
+		frame = new JFrame();
+		frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+	}
+
+
+
 	private void setSlider(int min, int max) {
 		hammDisSlider = new JSlider(min, max);
 		hammDisSlider.setValue(min);
