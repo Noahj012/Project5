@@ -37,7 +37,7 @@ public class GraphHamming extends JFrame
 	private JList<Object> list = new JList<Object>();
 	private JComboBox stationIDCheckbx;
 	private JScrollPane scrollPane;
-	private TreeSet<Object> test;
+	ArrayList<String> as;
 	
 	CalculateHammingDistance hammDis = new CalculateHammingDistance();
 	
@@ -203,16 +203,13 @@ public class GraphHamming extends JFrame
 		
 		addStationButton.addActionListener(new ActionListener()
 		{
-
+			int count = 0;
 			@SuppressWarnings("unchecked")
 			@Override
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				// TODO Auto-generated method stub
 					
-				test = hammDis.getSortedList();
-				String str = newStationEntryText.getText();
-				Object obj = str;
 				if (!(newStationEntryText.getText().length() == 4))
 				{
 					JOptionPane.showConfirmDialog(
@@ -221,10 +218,23 @@ public class GraphHamming extends JFrame
 							JOptionPane.OK_OPTION,
 							JOptionPane.OK_OPTION);
 				}
-				else if(!(test.contains(obj)));
+				
+				as = hammDis.getStationList();
+				for (Object h: as)
+				{
+					System.out.println(h.toString());
+					if (h.toString().equalsIgnoreCase((newStationEntryText.getText())))
+					{
+						++count;
+					}
+				}
+				
+				if (count == 0)
 				{
 					stationIDCheckbx.addItem(newStationEntryText.getText().toUpperCase());
+					as.add(newStationEntryText.getText().toUpperCase());
 				}
+			
 			}
 			
 		});
